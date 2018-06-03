@@ -4,7 +4,7 @@
   "description": "Rest API to Doleiro",
   "main": "app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "mocha tests"
   },
   "author": "paulo marcelo <paulomarceloa.nogueira@gmail.com>",
   "license": "ISC",
@@ -17,6 +17,7 @@
     "uuidv4": "^1.0.0"
   },
   "devDependencies": {
+    "assert": "^1.4.1",
     "uuid": "^3.2.1"
   }
 }

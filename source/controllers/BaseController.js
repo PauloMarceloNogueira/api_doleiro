@@ -6,8 +6,7 @@ module.exports = class BaseController {
    * controle de acesso por login.
    */
    authenticate(request, response, next) {
-   		const token = request.headers['x-access-token'];
-   		console.log(token,'token')
+   		const token = request.headers['authorization'];
    		UserModel.findOne({ token })
    			.then((user) => {
    				if ( user ) {

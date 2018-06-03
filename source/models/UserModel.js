@@ -44,7 +44,7 @@ schema.options.toObject = {
 		delete ret.password;
 	}
 };
-
+	
 /*
 * Hook chamado sempre que o schema é salvo.
 * Gera a senha criptografada pra salvar no banco

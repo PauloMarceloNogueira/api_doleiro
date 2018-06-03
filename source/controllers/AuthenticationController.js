@@ -7,7 +7,6 @@ module.exports = class AuthenticationController extends BaseController {
     super();
 
     if (express) {
-      console.log('express')
       this.express = express;
       this.applyRoutes();
     }
@@ -31,7 +30,6 @@ module.exports = class AuthenticationController extends BaseController {
    */
   signin(request, response) {
     const { email, password } = request.body;
-    console.log(email, password)
     UserModel.getAuthenticated(email, password, (error, user) => {
       if (error) {
         return response.status(400).json(error);
@@ -58,14 +56,9 @@ module.exports = class AuthenticationController extends BaseController {
       });
   }
 
-  /**
-   * signoff - Efetua a desautenticação do usuário
-   *
-   * @param {object} request  Objeto da requisição recebida
-   * @param {object} response Objeto do retorno da requisição
-   */
   test(request, response) {
-    console.log('Privado entrou')
+    console.log('aqui')
   }
+  
 }
 

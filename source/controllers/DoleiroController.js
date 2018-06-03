@@ -1,11 +1,13 @@
-const ExpressHelper = require('../helpers/ExpressHelper')
-const AuthenticationController = require('./AuthenticationController')
+const ExpressHelper = require('../helpers/ExpressHelper');
+const AuthenticationController = require('./AuthenticationController');
+const PartyController = require('./PartyController');
 
 module.exports = class DoleiroController {
 	// constructor
 	constructor() {
 		this.express = ExpressHelper.getInstance()
 		this.authenticationController = new AuthenticationController(this.express);
+		this.partyController = new PartyController(this.express);
 	}
 
 	/**
